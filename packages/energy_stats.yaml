@@ -6,12 +6,12 @@ template:
       state: >
         {% set panel_to_house_daily = states('sensor.solar_panel_to_house_daily') | float(0) %}
         {% set battery_in_daily = states('sensor.solar_battery_in_daily') | float(0) %}
-        {% set exported_power_daily = states('sensor.solar_exported_power_daily') | float(0) %}
+        {% set exported_power_daiy = states('sensor.solar_exported_power_daiy') | float(0) %}
 
-        {% if (panel_to_house_daily + battery_in_daily + exported_power_daily <= 0) %}
+        {% if (panel_to_house_daily + battery_in_daily + exported_power_daiy <= 0) %}
           0
         {% else %}
-          {{ ((panel_to_house_daily + battery_in_daily) / (panel_to_house_daily + battery_in_daily + exported_power_daily) * 100) | round (1) }}
+          {{ ((panel_to_house_daily + battery_in_daily) / (panel_to_house_daily + battery_in_daily + exported_power_daiy) * 100) | round (1) }}
         {% endif %}
 
     - name: "Solar Autarkie Ratio"
@@ -53,9 +53,8 @@ template:
       state: >
         {% set i1_dc_power = states('sensor.solaredge_i1_dc_power') | float(0) %}
         {% set b1_dc_power = states('sensor.solaredge_b1_dc_power') | float(0) %}
-        {% set battery_effectiveness = states('sensor.solar_battery_effectiveness') %}
 
-        {% if (is_state('sensor.solar_battery_effectiveness', 'unavailable') or is_state('sensor.solar_battery_effectiveness', 'unknown') or (battery_effectiveness == 0)) %}
+        {% if (is_state('sensor.solar_battery_effectiveness', 'unknown') or (solar_battery_effectiveness == 0)) %}
           1
         {% elif (i1_dc_power + b1_dc_power <= 0) %}
           {% if (b1_dc_power >= 0 or i1_dc_power <= 0) %}
