@@ -15,25 +15,18 @@ utility_meter:
     source: sensor.solaredge_m1_imported_kwh
     name: Solar Imported Power Daily Solar Edge
     cycle: daily
-    tariffs:
-      - peak
-      - offpeak
+
   solar_imported_power_daily:
     source: sensor.solar_imported_power_kwh
     name: Solar Imported Power Daily
     cycle: daily
-    tariffs:
-      - peak
-      - offpeak
   
 # Electricity Battery
   solar_battery_from_grid_daily:
     source: sensor.solar_grid_to_battery_kwh
     name: Solar Battery Imported Daily
     cycle: daily
-    tariffs:
-      - peak
-      - offpeak
+
   solar_battery_from_panels_daily:
     source: sensor.solar_panel_to_battery_kwh
     name: Solar Battery Generated Daily
@@ -58,9 +51,6 @@ utility_meter:
     source: sensor.solar_house_consumption_kwh
     name: Solar House Consumption Daily
     cycle: daily
-    tariffs:
-      - peak
-      - offpeak
 
 #### Weekly
 
@@ -79,25 +69,19 @@ utility_meter:
     source: sensor.solaredge_m1_imported_kwh
     name: Solar Imported Power Weekly Solar Edge
     cycle: weekly
-    tariffs:
-      - peak
-      - offpeak
+
   solar_imported_power_weekly:
     source: sensor.solar_imported_power_kwh
     name: Solar Imported Power Weekly
     cycle: weekly
-    tariffs:
-      - peak
-      - offpeak
+
   
 # Electricity Battery
   solar_battery_from_grid_weekly:
     source: sensor.solar_grid_to_battery_kwh
     name: Solar Battery Imported Weekly
     cycle: weekly
-    tariffs:
-      - peak
-      - offpeak
+
   solar_battery_from_panels_weekly:
     source: sensor.solar_panel_to_battery_kwh
     name: Solar Battery Generated Weekly
@@ -122,78 +106,66 @@ utility_meter:
     source: sensor.solar_house_consumption_kwh
     name: Solar House Consumption Weekly
     cycle: weekly
-    tariffs:
-      - peak
-      - offpeak
+
 
 #### Monthly
 # Electricity PV Panels
   solar_panel_to_house_monthly:
     source: sensor.solar_panel_to_house_kwh
     name: Solar Panel To House Monthly
-    cron: "0 0 19 * *"
+    cycle: monthly
   solar_panel_production_monthly:
     source: sensor.solar_panel_production_kwh
     name: Solar Panel Production Monthly
-    cron: "0 0 19 * *"
+    cycle: monthly
 
 # Electricity Grid
   solar_imported_power_monthly_solaredge:
     source: sensor.solaredge_m1_imported_kwh
     name: Solar Imported Power Monthly Solar Edge
-    cron: "0 0 19 * *"
+    cycle: monthly
     tariffs:
       - peak
       - offpeak
   solar_imported_power_monthly:
     source: sensor.solar_imported_power_kwh
     name: Solar Imported Power Monthly
-    cron: "0 0 19 * *"
-    tariffs:
-      - peak
-      - offpeak
+    cycle: monthly
+
   
 # Electricity Battery
   solar_battery_from_grid_monthly:
     source: sensor.solar_grid_to_battery_kwh
     name: Solar Battery Imported Monthly
-    cron: "0 0 19 * *"
-    tariffs:
-      - peak
-      - offpeak
+    cycle: monthly
+
   solar_battery_from_panels_monthly:
     source: sensor.solar_panel_to_battery_kwh
     name: Solar Battery Generated Monthly
-    cron: "0 0 19 * *"
+    cycle: monthly
   solar_battery_in_monthly:
     source: sensor.solar_battery_in_kwh
     name: Solar Battery In Monthly
-    cron: "0 0 19 * *"
-    tariffs:
-      - peak
-      - offpeak
+    cycle: monthly
+
   solar_battery_out_monthly:
     source: sensor.solar_battery_out_kwh
     name: Solar Battery Out Monthly
-    cron: "0 0 19 * *"
-    tariffs:
-      - peak
-      - offpeak
+    cycle: monthly
+
 
 # Electricity Export
   solar_exported_power_monthly:
     source: sensor.solar_exported_power_kwh
     name: Solar Exported Power Monthly
-    cron: "0 0 19 * *"
+    cycle: monthly
 
 # Consumption
   solar_house_consumption_monthly:
     source: sensor.solar_house_consumption_kwh
     name: Solar House Consumption Monthly
-    cron: "0 0 19 * *"
-    tariffs:
-      - peak
-      - offpeak
+    cycle: monthly
+
 
 ####### Yearly
 
@@ -212,25 +184,19 @@ utility_meter:
     source: sensor.solaredge_m1_imported_kwh
     name: Solar Imported Power Yearly Solar Edge
     cycle: yearly
-    tariffs:
-      - peak
-      - offpeak
+
   solar_imported_power_yearly:
     source: sensor.solar_imported_power_kwh
     name: Solar Imported Power Yearly
     cycle: yearly
-    tariffs:
-      - peak
-      - offpeak
+
   
 # Electricity Battery
   solar_battery_from_grid_yearly:
     source: sensor.solar_grid_to_battery_kwh
     name: Solar Battery Imported Yearly
     cycle: yearly
-    tariffs:
-      - peak
-      - offpeak
+
   solar_battery_from_panels_yearly:
     source: sensor.solar_panel_to_battery_kwh
     name: Solar Battery Generated Yearly
@@ -239,16 +205,12 @@ utility_meter:
     source: sensor.solar_battery_in_kwh
     name: Solar Battery In Yearly
     cycle: yearly
-    tariffs:
-      - peak
-      - offpeak
+
   solar_battery_out_yearly:
     source: sensor.solar_battery_out_kwh
     name: Solar Battery Out Yearly
     cycle: yearly
-    tariffs:
-      - peak
-      - offpeak
+
 
 # Electricity Export
   solar_exported_power_yearly:
@@ -261,6 +223,3 @@ utility_meter:
     source: sensor.solar_house_consumption_kwh
     name: Solar House Consumption Yearly
     cycle: yearly
-    tariffs:
-      - peak
-      - offpeak
