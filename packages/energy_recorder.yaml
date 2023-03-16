@@ -1,0 +1,50 @@
+recorder:
+  include:
+    entities:
+      - sensor.solaredge_m1_exported_kwh
+      - sensor.solaredge_m1_imported_kwh
+      - sensor.solaredge_m1_imported_kwh_cost
+      - sensor.solaredge_m1_exported_kwh_compensation
+      - sensor.solaredge_b1_state_of_energy
+      - sensor.solar_inverter_effectiveness
+      - sensor.solar_battery_effectiveness
+      - sensor.solar_battery_effectiveness_average
+      - sensor.solar_inverter_effectiveness_average
+      - sensor.solar_accounting_total_yearly
+      
+      - sensor.solar_panel_production_daily
+      - sensor.solar_battery_in_daily
+      - sensor.solar_battery_out_daily
+      - sensor.solar_house_consumption_daily
+      - sensor.solar_imported_power_daily
+      - sensor.solar_exported_power_daily
+      - sensor.solar_inverter_effectiveness
+      - sensor.solar_battery_effectiveness
+      - sensor.solar_panel_to_house_daily
+
+      - sensor.solar_battery_in_weekly
+      - sensor.solar_battery_out_weekly
+      - sensor.solar_panel_to_house_weekly
+      - sensor.solar_imported_power_weekly      
+      - sensor.solar_exported_power_weekly
+      - sensor.solar_house_consumption_weekly
+      - sensor.solar_panel_production_weekly
+      - sensor.solar_exported_power_weekly
+      
+      - sensor.solar_battery_in_monthly
+      - sensor.solar_battery_out_monthly
+      - sensor.solar_panel_to_house_monthly
+      - sensor.solar_imported_power_monthly      
+      - sensor.solar_exported_power_monthly
+      - sensor.solar_house_consumption_monthly
+      - sensor.solar_panel_production_monthly
+      - sensor.solar_exported_power_monthly
+
+      - sensor.solar_battery_in_yearly
+      - sensor.solar_battery_out_yearly
+      - sensor.solar_panel_to_house_yearly
+      - sensor.solar_imported_power_yearly      
+      - sensor.solar_exported_power_yearly
+      - sensor.solar_house_consumption_yearly
+      - sensor.solar_panel_production_yearly
+      - sensor.solar_exported_power_yearly
