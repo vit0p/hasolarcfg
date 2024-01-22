@@ -21,25 +21,6 @@ utility_meter:
     name: Solar Imported Power Daily
     cycle: daily
   
-# Electricity Battery
-  solar_battery_from_grid_daily:
-    source: sensor.solar_grid_to_battery_kwh
-    name: Solar Battery Imported Daily
-    cycle: daily
-
-  solar_battery_from_panels_daily:
-    source: sensor.solar_panel_to_battery_kwh
-    name: Solar Battery Generated Daily
-    cycle: daily
-  solar_battery_in_daily:
-    source: sensor.solar_battery_in_kwh
-    name: Solar Battery In Daily
-    cycle: daily
-  solar_battery_out_daily:
-    source: sensor.solar_battery_out_kwh
-    name: Solar Battery Out Daily
-    cycle: daily
-
 # Electricity Export
   solar_exported_power_daily:
     source: sensor.solar_exported_power_kwh
@@ -73,26 +54,6 @@ utility_meter:
   solar_imported_power_weekly:
     source: sensor.solar_imported_power_kwh
     name: Solar Imported Power Weekly
-    cycle: weekly
-
-  
-# Electricity Battery
-  solar_battery_from_grid_weekly:
-    source: sensor.solar_grid_to_battery_kwh
-    name: Solar Battery Imported Weekly
-    cycle: weekly
-
-  solar_battery_from_panels_weekly:
-    source: sensor.solar_panel_to_battery_kwh
-    name: Solar Battery Generated Weekly
-    cycle: weekly
-  solar_battery_in_weekly:
-    source: sensor.solar_battery_in_kwh
-    name: Solar Battery In Weekly
-    cycle: weekly
-  solar_battery_out_weekly:
-    source: sensor.solar_battery_out_kwh
-    name: Solar Battery Out Weekly
     cycle: weekly
 
 # Electricity Export
@@ -132,28 +93,6 @@ utility_meter:
     name: Solar Imported Power Monthly
     cycle: monthly
 
-  
-# Electricity Battery
-  solar_battery_from_grid_monthly:
-    source: sensor.solar_grid_to_battery_kwh
-    name: Solar Battery Imported Monthly
-    cycle: monthly
-
-  solar_battery_from_panels_monthly:
-    source: sensor.solar_panel_to_battery_kwh
-    name: Solar Battery Generated Monthly
-    cycle: monthly
-  solar_battery_in_monthly:
-    source: sensor.solar_battery_in_kwh
-    name: Solar Battery In Monthly
-    cycle: monthly
-
-  solar_battery_out_monthly:
-    source: sensor.solar_battery_out_kwh
-    name: Solar Battery Out Monthly
-    cycle: monthly
-
-
 # Electricity Export
   solar_exported_power_monthly:
     source: sensor.solar_exported_power_kwh
@@ -188,27 +127,6 @@ utility_meter:
   solar_imported_power_yearly:
     source: sensor.solar_imported_power_kwh
     name: Solar Imported Power Yearly
-    cycle: yearly
-
-  
-# Electricity Battery
-  solar_battery_from_grid_yearly:
-    source: sensor.solar_grid_to_battery_kwh
-    name: Solar Battery Imported Yearly
-    cycle: yearly
-
-  solar_battery_from_panels_yearly:
-    source: sensor.solar_panel_to_battery_kwh
-    name: Solar Battery Generated Yearly
-    cycle: yearly
-  solar_battery_in_yearly:
-    source: sensor.solar_battery_in_kwh
-    name: Solar Battery In Yearly
-    cycle: yearly
-
-  solar_battery_out_yearly:
-    source: sensor.solar_battery_out_kwh
-    name: Solar Battery Out Yearly
     cycle: yearly
 
 
