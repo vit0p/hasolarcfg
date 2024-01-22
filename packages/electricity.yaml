@@ -6,17 +6,16 @@ template:
       icon: mdi:solar-power
       state: >
         {% set i1_dc_power = states('sensor.solaredge_i1_dc_power') | float(0) %}
-        {% set b1_dc_power = states('sensor.solaredge_b1_dc_power') | float(0) %}
 
-        {% if (is_state('sensor.solaredge_i1_dc_power', 'unknown') or is_state('sensor.solaredge_b1_dc_power', 'unknown')) %}
+        {% if (is_state('sensor.solaredge_i1_dc_power', 'unknown')) %}
           0
-        {% elif (i1_dc_power + b1_dc_power <= 0) %}
+        {% elif (i1_dc_power <= 0) %}
           0
         {% else %}
-          {{ (i1_dc_power + b1_dc_power) }}
+          {{ i1_dc_power }}
         {% endif %}
       availability: >
-        {{ states('sensor.solaredge_i1_dc_power') | is_number and states('sensor.solaredge_i1_ac_power') | is_number and states('sensor.solaredge_b1_dc_power') | is_number }}
+        {{ states('sensor.solaredge_i1_dc_power') | is_number and states('sensor.solaredge_i1_ac_power') | is_number }}
 
     - name: "Solar Panel To House W"
       unique_id: solar_panel_to_house_w
